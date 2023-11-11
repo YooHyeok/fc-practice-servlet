@@ -15,7 +15,7 @@ import java.io.IOException;
  * CalculatorServlet 클래스의 init, service등의 메소드를 호출하기 위해서는 인스턴스를 만들어야 한다.<br/>
  * 해당 인스턴스는 딱 하나만 생성하여 공유한다.
  */
-@WebServlet("default/calculate") //URL Path와 Servlet을 매핑하기위한 어노테이션
+@WebServlet("/default/calculate") //URL Path와 Servlet을 매핑하기위한 어노테이션
 public class CalculatorDefaultServlet  implements Servlet {
 
     private static final Logger log = LoggerFactory.getLogger(CalculatorDefaultServlet.class);
