@@ -1,5 +1,13 @@
-#GET http://localhost:8080/calculate
-
 #GET http://localhost:8080/default/calculate?operand1=11&operator=*&operand2=55
 #GET http://localhost:8080/generic/calculate?operand1=11&operator=*&operand2=55
-GET http://localhost:8080/http/calculate?operand1=11&operator=*&operand2=55
+#GET http://localhost:8080/http/calculate?operand1=11&operator=*&operand2=55
+
+
+# https://ko.wikipedia.org/wiki/%ED%8D%BC%EC%84%BC%ED%8A%B8_%EC%9D%B8%EC%BD%94%EB%94%A9
+# URL에 사용할 수 없는 문자 : 예약어, Non-ASCCI 문자(한글) 등
+# 예약어 : !, *, ', (, ), ;, :, @, &, =, +, $, ,, /, ?, #, [, ]
+
+#URL인코딩 사이트 : https://www.convertstring.com/ko/EncodeDecode/UrlEncode
+# + 인코딩 : %2b
+
+GET http://localhost:8080/http/calculate?operand1=11&operator=%2b&operand2=55
