@@ -18,8 +18,6 @@ import java.io.IOException;
 public class CalculatorGenericServlet extends GenericServlet {
 
     private static final Logger log = LoggerFactory.getLogger(CalculatorGenericServlet.class);
-    private ServletConfig servletConfig;
-
 
     @Override
     public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {

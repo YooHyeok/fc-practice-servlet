@@ -13,7 +13,10 @@ import java.io.IOException;
  * 서블릿 객체를 싱글톤으로 관리 <br/>
  * (인스턴스를 하나만 생성하여 공유하는방식) <br/>
  * CalculatorServlet 클래스의 init, service등의 메소드를 호출하기 위해서는 인스턴스를 만들어야 한다.<br/>
- * 해당 인스턴스는 딱 하나만 생성하여 공유한다.
+ * 해당 인스턴스는 딱 하나만 생성하여 공유한다. <br/> <br/>
+ * Servlet컨테이너 톰캣이 UrlPath와 일치하는 Servlet의 인스턴스를 만들고, <br/>
+ * init메소드를 호출하고, service메소드를 순차적으로 호출한다.
+ *
  */
 @WebServlet("/default/calculate") //URL Path와 Servlet을 매핑하기위한 어노테이션
 public class CalculatorDefaultServlet  implements Servlet {
